@@ -1,9 +1,6 @@
+import DeleteBriefinProps from "../Props/DeleteBriefinProps";
 import prismaclient from "../prisma";
 
-
-interface DeleteBriefinProps{
-    id: string
-}
 
 class DeleteBriefinService{
     async execute({id}: DeleteBriefinProps){
