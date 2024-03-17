@@ -1,7 +1,5 @@
 # GestorDeBriefins
 
-Claro! Aqui está um exemplo de como você pode criar um README para o seu projeto "GestordeBriefins":
-
 ---
 
 # Gestor de Briefins
@@ -59,8 +57,6 @@ Para executar este projeto localmente, siga estas etapas:
 - Criar novos briefins.
 - Atualizar briefins existentes.
 - Excluir briefins.
-
-Entendi. Aqui está o trecho adicionado como informação no README:
 
 ---
 
