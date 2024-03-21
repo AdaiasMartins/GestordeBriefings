@@ -1,4 +1,3 @@
-// CreateBriefinProps.ts
 import { EstadoDoBriefin } from "@prisma/client";
 
 interface CreateBriefinProps {

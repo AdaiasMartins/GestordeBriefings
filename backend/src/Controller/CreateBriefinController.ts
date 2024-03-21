@@ -1,6 +1,6 @@
 import { FastifyRequest, FastifyReply } from "fastify";
 import { CreateBriefinService } from "../services/CreacteBriefinService";
-import { CreateBriefinProps } from "../services/CreacteBriefinService"; // Ajuste o caminho conforme necessário
+import { CreateBriefinProps } from "../services/CreacteBriefinService"; 
 
 
 export class CreateBriefinController{
