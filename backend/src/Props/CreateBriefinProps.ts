@@ -1,3 +1,4 @@
+
 import { EstadoDoBriefin } from "@prisma/client";
 
 interface CreateBriefinProps {
@@ -7,3 +8,4 @@ interface CreateBriefinProps {
 }
 
 export default CreateBriefinProps;
+
