@@ -10,6 +10,8 @@ app.setErrorHandler((error, request, reply) =>{
     reply.code(400).send({message: error.message})
 })
 
+export {app};
+
 const start = async () => {
     try {
         await app.register(cors);
