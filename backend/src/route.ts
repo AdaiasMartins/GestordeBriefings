@@ -3,6 +3,7 @@ import { CreateBriefinController } from "./Controller/CreateBriefinController";
 import { ListBriefinsController } from "./Controller/ListBriefinsController";
 import { DeleteBriefinController } from "./Controller/DeleteBriefinController";
 import { UpdateBriefinController } from "./Controller/UpdateBriefinController";
+import { GetBriefinController } from "./Controller/GetBriefinController";
 
 export async function routes(fastify: FastifyInstance, options: FastifyPluginOptions) {
     fastify.post("/briefin", async (request: FastifyRequest, reply: FastifyReply) => {
@@ -13,6 +14,9 @@ export async function routes(fastify: FastifyInstance, options: FastifyPluginOpt
         return new ListBriefinsController().handle(request, reply);
     });
 
+    fastify.get("/briefins/:id", async (request: FastifyRequest, reply: FastifyReply) => {
+        return new GetBriefinController().handle(request, reply);
+    });
     fastify.delete("/briefin/:id", async (request: FastifyRequest, reply: FastifyReply) => {
         return new DeleteBriefinController().handle(request, reply);
     });
