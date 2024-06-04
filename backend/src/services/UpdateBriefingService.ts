@@ -1,7 +1,7 @@
 import prismaclient from "../prisma";
-import UpdateBriefinProps from "../Props/UpdateBriefinProps";
+import UpdateBriefinProps from "../Props/UpdateBriefingProps";
 
-class UpdateBriefinService {
+class UpdateBriefingService {
   async execute({ id, nome, descricao, estado }: UpdateBriefinProps) {
 
     if (!id) {
@@ -17,4 +17,4 @@ class UpdateBriefinService {
   }
 }
 
-export { UpdateBriefinService }
+export { UpdateBriefingService }

@@ -1,7 +1,7 @@
 import { error } from "console";
 import prismaclient from "../prisma";
 
-class GetBriefinService{
+class GetBriefingService{
     async execute(id: string){
         if(!id){
             throw new Error("É preciso informar o id do briefing")
@@ -11,4 +11,4 @@ class GetBriefinService{
         return briefing;
     }
 }
-export default GetBriefinService;
+export default GetBriefingService;

@@ -1,27 +1,27 @@
 import fastify, { FastifyInstance, FastifyPluginOptions, FastifyRequest, FastifyReply } from "fastify";
-import { CreateBriefinController } from "./Controller/CreateBriefinController";
-import { ListBriefinsController } from "./Controller/ListBriefinsController";
-import { DeleteBriefinController } from "./Controller/DeleteBriefinController";
-import { UpdateBriefinController } from "./Controller/UpdateBriefinController";
-import { GetBriefinController } from "./Controller/GetBriefinController";
+import { CreateBriefingController } from "./Controller/CreateBriefingController";
+import { ListBriefingsController } from "./Controller/ListBriefingsController";
+import { DeleteBriefingController } from "./Controller/DeleteBriefingController";
+import { UpdateBriefingController } from "./Controller/UpdateBriefingController";
+import { GetBriefingController } from "./Controller/GetBriefingController";
 
 export async function routes(fastify: FastifyInstance, options: FastifyPluginOptions) {
-    fastify.post("/briefin", async (request: FastifyRequest, reply: FastifyReply) => {
-        return new CreateBriefinController().handle(request, reply);
+    fastify.post("/briefing", async (request: FastifyRequest, reply: FastifyReply) => {
+        return new CreateBriefingController().handle(request, reply);
     });
 
-    fastify.get("/briefins", async (request: FastifyRequest, reply: FastifyReply) => {
-        return new ListBriefinsController().handle(request, reply);
+    fastify.get("/briefings", async (request: FastifyRequest, reply: FastifyReply) => {
+        return new ListBriefingsController().handle(request, reply);
     });
 
-    fastify.get("/briefins/:id", async (request: FastifyRequest, reply: FastifyReply) => {
-        return new GetBriefinController().handle(request, reply);
+    fastify.get("/briefings/:id", async (request: FastifyRequest, reply: FastifyReply) => {
+        return new GetBriefingController().handle(request, reply);
     });
-    fastify.delete("/briefin/:id", async (request: FastifyRequest, reply: FastifyReply) => {
-        return new DeleteBriefinController().handle(request, reply);
+    fastify.delete("/briefing/:id", async (request: FastifyRequest, reply: FastifyReply) => {
+        return new DeleteBriefingController().handle(request, reply);
     });
 
-    fastify.patch("/briefin/:id", async (request: FastifyRequest, reply: FastifyReply) => {
-        return new UpdateBriefinController().handle(request, reply);
+    fastify.patch("/briefing/:id", async (request: FastifyRequest, reply: FastifyReply) => {
+        return new UpdateBriefingController().handle(request, reply);
     });
 }

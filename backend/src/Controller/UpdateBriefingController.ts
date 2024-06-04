@@ -1,13 +1,13 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { UpdateBriefinService } from "../services/UpdateBriefinService";
+import { UpdateBriefingService } from "../services/UpdateBriefingService";
 import { EstadoDoBriefin } from "@prisma/client";
 
-export class UpdateBriefinController {
+export class UpdateBriefingController {
   async handle(request: FastifyRequest, reply: FastifyReply) {
     const { id } = request.params as { id: string };
     const { nome, descricao, estado } = request.body as {nome: string, descricao: string, estado: EstadoDoBriefin};
 
-    const updateBriefinService = new UpdateBriefinService();
+    const updateBriefinService = new UpdateBriefingService();
     try {
       const updatedBriefin = await updateBriefinService.execute({
         id,

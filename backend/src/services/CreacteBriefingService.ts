@@ -1,9 +1,9 @@
 import { EstadoDoBriefin } from "@prisma/client";
 import prismaclient from "../prisma";
-import CreateBriefinProps from "../Props/CreateBriefinProps";
+import CreateBriefingProps from "../Props/CreateBriefingProps";
 
-class CreateBriefinService{
-    async execute({ nome, descricao, estado }: CreateBriefinProps){
+class CreateBriefingService{
+    async execute({ nome, descricao, estado }: CreateBriefingProps){
         
         if(!nome || !descricao || !estado){
             throw new Error("Todos os campos devem ser preenchidos.");
@@ -21,5 +21,5 @@ class CreateBriefinService{
 }
 
 
-export { CreateBriefinService };
-export { CreateBriefinProps }
+export { CreateBriefingService };
+export { CreateBriefingProps }

@@ -14,17 +14,17 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Briefin {
+model Briefing {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   nome String
   descricao String
   data DateTime? @default(now())
-  estado EstadoDoBriefin
+  estado EstadoDoBriefing
 
-  @@map("briefins")
+  @@map("briefings")
 }
 
-enum EstadoDoBriefin{
+enum EstadoDoBriefing{
   negociando
   finalizado
   aprovado

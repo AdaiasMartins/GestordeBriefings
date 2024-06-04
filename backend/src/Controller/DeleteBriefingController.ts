@@ -1,11 +1,11 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { DeleteBriefinService } from "../services/DeleteBriefinService";
+import { DeleteBriefingService } from "../services/DeleteBriefingService";
 
-export class DeleteBriefinController {
+export class DeleteBriefingController {
     async handle(request: FastifyRequest, reply: FastifyReply) {
         const { id } = request.params as { id: string };
 
-        const deleteBriefinService = new DeleteBriefinService();
+        const deleteBriefinService = new DeleteBriefingService();
         const briefin = await deleteBriefinService.execute({ id });
 
         reply.send(briefin);

@@ -1,6 +1,6 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { CreateBriefinController } from "../../src/Controller/CreateBriefinController";
-import { CreateBriefinService } from "../../src/services/CreacteBriefinService"; // Corrigido o nome
+import { CreateBriefinController } from "../../src/Controller/CreateBriefingController";
+import { CreateBriefinService } from "../../src/services/CreacteBriefingService"; // Corrigido o nome
 
 jest.mock("../../src/services/CreacteBriefinService"); // Corrigido o nome
 

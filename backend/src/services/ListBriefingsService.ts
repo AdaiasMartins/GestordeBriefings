@@ -1,6 +1,6 @@
 import prismaclient from "../prisma";
 
-class ListBriefinsService{
+class ListBriefingsService{
     async execute(){
         const briefins = await prismaclient.briefin.findMany()
         
@@ -8,4 +8,4 @@ class ListBriefinsService{
     }
 }
 
-export { ListBriefinsService }
+export { ListBriefingsService }

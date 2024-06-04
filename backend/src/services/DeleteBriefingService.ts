@@ -1,9 +1,9 @@
-import DeleteBriefinProps from "../Props/DeleteBriefinProps";
+import DeleteBriefingProps from "../Props/DeleteBriefingProps";
 import prismaclient from "../prisma";
 
 
-class DeleteBriefinService{
-    async execute({id}: DeleteBriefinProps){
+class DeleteBriefingService{
+    async execute({id}: DeleteBriefingProps){
         if(!id){
             throw new Error("Id inválido");
         }
@@ -26,4 +26,4 @@ class DeleteBriefinService{
         return{message: "Briefin deletado"}
     }
 }
-export { DeleteBriefinService }
+export { DeleteBriefingService }

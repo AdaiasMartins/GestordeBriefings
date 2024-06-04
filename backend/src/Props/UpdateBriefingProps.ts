@@ -1,10 +1,10 @@
 import { EstadoDoBriefin } from "@prisma/client";
 
-interface UpdateBriefinProps {
+interface UpdateBriefingProps {
   id: string; 
   nome?: string;
   descricao?: string; 
   estado?: EstadoDoBriefin; 
 }
 
-export default UpdateBriefinProps;
+export default UpdateBriefingProps;
